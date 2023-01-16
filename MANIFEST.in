@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include afmco *.css
+recursive-include afmco *.csv
+recursive-include afmco *.html
+recursive-include afmco *.ico
+recursive-include afmco *.js
+recursive-include afmco *.json
+recursive-include afmco *.md
+recursive-include afmco *.png
+recursive-include afmco *.py
+recursive-include afmco *.svg
+recursive-include afmco *.txt
+recursive-exclude afmco *.pyc
