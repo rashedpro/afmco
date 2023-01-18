@@ -9,13 +9,10 @@
  "field_order": [
   "naming_series",
   "date",
-  "status",
-  "payment_type",
   "account_no",
   "remark",
   "column_break_8",
   "created_by",
-  "mode_of_payment",
   "amount",
   "amount_in_words",
   "assign_to_employee",
@@ -38,17 +35,6 @@
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status"
-  },
-  {
-   "fieldname": "payment_type",
-   "fieldtype": "Select",
-   "label": "Payment Type",
-   "options": "\nPayment\nReceipt"
   },
   {
    "fieldname": "account_no",
@@ -74,11 +60,6 @@
    "fieldtype": "Link",
    "label": "Created By",
    "options": "User"
-  },
-  {
-   "fieldname": "mode_of_payment",
-   "fieldtype": "Select",
-   "label": "Mode Of Payment"
   },
   {
    "fieldname": "amount",
@@ -118,7 +99,7 @@
    "link_fieldname": "expense_request_cf"
   }
  ],
- "modified": "2023-01-18 08:53:32.806706",
+ "modified": "2023-01-18 16:29:14.335996",
  "modified_by": "Administrator",
  "module": "Afmco",
  "name": "Expense Request Afmco",
