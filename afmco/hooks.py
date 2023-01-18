@@ -31,7 +31,7 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Company" : "public/js/company.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -95,13 +95,16 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Sales Invoice": {
+		"on_submit": "afmco.api.create_journal_entry",
+	},
+	"Journal Entry":{
+		"validate":"afmco.api.update_expense_request_jv_status",
+		"on_cancel":"afmco.api.update_expense_request_jv_status",
+		"on_trash":"afmco.api.update_expense_request_jv_status",
+	}
+}
 
 # Scheduled Tasks
 # ---------------

@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series",
+ "autoname": "naming_series:",
  "creation": "2023-01-16 15:51:04.227284",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -13,11 +13,11 @@
   "payment_type",
   "account_no",
   "remark",
-  "amount_in_words",
   "column_break_8",
   "created_by",
   "mode_of_payment",
   "amount",
+  "amount_in_words",
   "assign_to_employee",
   "jv_status",
   "amended_from"
@@ -27,12 +27,14 @@
    "default": "ER.###",
    "fieldname": "naming_series",
    "fieldtype": "Select",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "naming_series",
    "options": "ER.###",
    "reqd": 1
   },
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
@@ -91,6 +93,7 @@
    "options": "User"
   },
   {
+   "default": "JV Not Created",
    "fieldname": "jv_status",
    "fieldtype": "Select",
    "label": "JV Status",
@@ -108,8 +111,14 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2023-01-16 15:51:04.227284",
+ "links": [
+  {
+   "group": "Reference",
+   "link_doctype": "Journal Entry",
+   "link_fieldname": "expense_request_cf"
+  }
+ ],
+ "modified": "2023-01-18 08:53:32.806706",
  "modified_by": "Administrator",
  "module": "Afmco",
  "name": "Expense Request Afmco",
