@@ -25,18 +25,20 @@ def create_journal_entry(self,method):
         accounts.append({
             "account": default_jv_credit_account_cf,
             "credit_in_account_currency": flt(self.net_total, precision),
+            "cost_center": self.get("items")[0].cost_center or ''
         })
         # debit entry
         accounts.append({
             "account": default_jv_debit_account_cf,
             "debit_in_account_currency": flt(self.net_total, precision),
+            "cost_center": self.get("items")[0].cost_center or ''
         })
         user_remark="It is auto created on submit of Sales Invoice {0}".format(self.name)
         journal_entry = frappe.new_doc('Journal Entry')
         journal_entry.voucher_type = 'Journal Entry'
         journal_entry.user_remark =user_remark
         journal_entry.company = self.company
-        journal_entry.posting_date = today()
+        journal_entry.posting_date = self.jv_due_date_cf
         journal_entry.set("accounts", accounts)
         journal_entry.jv_based_on_submitted_si_cf=self.name
         journal_entry.save(ignore_permissions = True)				
