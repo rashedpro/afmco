@@ -10,6 +10,9 @@
   "naming_series",
   "date",
   "account_no",
+  "binificiary_name",
+  "mode_of_payment",
+  "expense_account",
   "remark",
   "column_break_8",
   "created_by",
@@ -17,7 +20,10 @@
   "amount_in_words",
   "assign_to_employee",
   "jv_status",
-  "amended_from"
+  "paid_account",
+  "cost_center",
+  "amended_from",
+  "journal_entry_reference"
  ],
  "fields": [
   {
@@ -59,7 +65,8 @@
    "fieldname": "created_by",
    "fieldtype": "Link",
    "label": "Created By",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "amount",
@@ -88,6 +95,47 @@
    "options": "Expense Request Afmco",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "binificiary_name",
+   "fieldtype": "Data",
+   "label": "Binificiary Name "
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Select",
+   "label": "Mode of Payment ",
+   "options": "Bank Transfer\nCash\nGoverment Payment"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "expense_account",
+   "fieldtype": "Link",
+   "label": "Expense Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "paid_account",
+   "fieldtype": "Link",
+   "label": "Paid Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "reqd": 1
+  },
+  {
+   "fieldname": "journal_entry_reference",
+   "fieldtype": "Link",
+   "label": "Journal Entry Reference",
+   "options": "Journal Entry"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -99,10 +147,11 @@
    "link_fieldname": "expense_request_cf"
   }
  ],
- "modified": "2023-01-18 16:29:14.335996",
+ "modified": "2024-03-10 16:27:30.426189",
  "modified_by": "Administrator",
  "module": "Afmco",
  "name": "Expense Request Afmco",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -119,5 +168,6 @@
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }

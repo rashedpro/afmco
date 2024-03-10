@@ -11,6 +11,7 @@ def update_expense_request_jv_status(self,method):
             frappe.msgprint(msg, title=_("Expense Request"),alert=1)
         elif method=='on_cancel' or  method=='on_trash':
             frappe.db.set_value('Expense Request Afmco', self.expense_request_cf, 'jv_status', 'JV Not Created')
+            frappe.db.set_value('Expense Request Afmco', self.expense_request_cf, 'journal_entry_reference', '')
             msg =_("Expencse Request {0} , JV status is updated to <b>JV Not Created</b>".format(frappe.bold(get_link_to_form('Expense Request Afmco',self.expense_request_cf))))
             frappe.msgprint(msg, title=_("Expense Request"),alert=1)            
 
