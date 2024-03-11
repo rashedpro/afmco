@@ -18,7 +18,7 @@ def create_journal_entry(doc):
 	accounts = []
 	journal_entry = frappe.new_doc("Journal Entry")
 	journal_entry.voucher_type = "Journal Entry"
-	journal_entry.user_remark = "Journal Entry for Ticket Allownce"
+	journal_entry.user_remark = doc["remark"]
 	journal_entry.expense_request_cf=doc["name"]
 	journal_entry.company=frappe.defaults.get_global_default("company")
 	journal_entry.posting_date=datetime.date.today()

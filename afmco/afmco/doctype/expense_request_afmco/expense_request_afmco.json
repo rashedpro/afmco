@@ -85,7 +85,8 @@
    "fieldname": "jv_status",
    "fieldtype": "Select",
    "label": "JV Status",
-   "options": "\nJV Created\nJV Not Created"
+   "options": "\nJV Created\nJV Not Created",
+   "read_only": 1
   },
   {
    "fieldname": "amended_from",
@@ -135,7 +136,8 @@
    "fieldname": "journal_entry_reference",
    "fieldtype": "Link",
    "label": "Journal Entry Reference",
-   "options": "Journal Entry"
+   "options": "Journal Entry",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -147,7 +149,7 @@
    "link_fieldname": "expense_request_cf"
   }
  ],
- "modified": "2024-03-10 16:27:30.426189",
+ "modified": "2024-03-11 10:00:38.022605",
  "modified_by": "Administrator",
  "module": "Afmco",
  "name": "Expense Request Afmco",
