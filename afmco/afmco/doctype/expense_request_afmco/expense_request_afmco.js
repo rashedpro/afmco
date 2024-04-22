@@ -16,6 +16,7 @@ frappe.ui.form.on('Expense Request Afmco', {
 		if (frm.doc.docstatus == 1) {
 			if(frm.doc.journal_entry_reference===undefined || frm.doc.journal_entry_reference==='')
 			frm.add_custom_button(__("Create JV"), function () {
+			if(frm.doc.expense_account!==undefined && frm.doc.paid_account!==undefined  && frm.doc.cost_center!==undefined )
 				frappe.call({
 					args: {
 						"doc": frm.doc,
@@ -23,6 +24,9 @@ frappe.ui.form.on('Expense Request Afmco', {
 					method: "afmco.afmco.doctype.expense_request_afmco.expense_request_afmco.create_journal_entry",
 					callback: function(r) {}
 				});
+			else{
+				frappe.throw("يجب عليك ادخال جميع البيانات المطلوبة");
+			}
 				// let journal_entry = frappe.model.get_new_doc("Journal Entry");
 				// journal_entry.expense_request_cf = frm.doc.name;
 				// frappe.set_route("Form", journal_entry.doctype, journal_entry.name);

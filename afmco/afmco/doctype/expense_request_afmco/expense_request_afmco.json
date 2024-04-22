@@ -48,6 +48,7 @@
    "label": "Account No"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "remark",
    "fieldtype": "Text",
    "label": "Remark"
@@ -113,24 +114,21 @@
    "fieldname": "expense_account",
    "fieldtype": "Link",
    "label": "Expense Account",
-   "options": "Account",
-   "reqd": 1
+   "options": "Account"
   },
   {
    "allow_on_submit": 1,
    "fieldname": "paid_account",
    "fieldtype": "Link",
    "label": "Paid Account",
-   "options": "Account",
-   "reqd": 1
+   "options": "Account"
   },
   {
    "allow_on_submit": 1,
    "fieldname": "cost_center",
    "fieldtype": "Link",
    "label": "Cost Center",
-   "options": "Cost Center",
-   "reqd": 1
+   "options": "Cost Center"
   },
   {
    "fieldname": "journal_entry_reference",
@@ -149,7 +147,7 @@
    "link_fieldname": "expense_request_cf"
   }
  ],
- "modified": "2024-03-11 10:00:38.022605",
+ "modified": "2024-04-22 16:41:49.368642",
  "modified_by": "Administrator",
  "module": "Afmco",
  "name": "Expense Request Afmco",
