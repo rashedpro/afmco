@@ -22,6 +22,7 @@
   "jv_status",
   "paid_account",
   "cost_center",
+  "is_taxable",
   "amended_from",
   "journal_entry_reference"
  ],
@@ -136,6 +137,12 @@
    "label": "Journal Entry Reference",
    "options": "Journal Entry",
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_taxable",
+   "fieldtype": "Check",
+   "label": "Is Taxable"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -147,7 +154,7 @@
    "link_fieldname": "expense_request_cf"
   }
  ],
- "modified": "2024-04-22 16:41:49.368642",
+ "modified": "2024-09-25 12:17:51.149558",
  "modified_by": "Administrator",
  "module": "Afmco",
  "name": "Expense Request Afmco",
