@@ -10,7 +10,7 @@
   "naming_series",
   "date",
   "account_no",
-  "binificiary_name",
+  "payment_purpose",
   "mode_of_payment",
   "expense_account",
   "remark",
@@ -100,15 +100,10 @@
    "read_only": 1
   },
   {
-   "fieldname": "binificiary_name",
-   "fieldtype": "Data",
-   "label": "Binificiary Name "
-  },
-  {
    "fieldname": "mode_of_payment",
    "fieldtype": "Select",
    "label": "Mode of Payment ",
-   "options": "Bank Transfer\nCash\nGoverment Payment"
+   "options": "Bank Transfer\nCash\nGovernment Payment\nSADAD\nCredit or Debit Card"
   },
   {
    "allow_on_submit": 1,
@@ -143,6 +138,11 @@
    "fieldname": "is_taxable",
    "fieldtype": "Check",
    "label": "Is Taxable"
+  },
+  {
+   "fieldname": "payment_purpose",
+   "fieldtype": "Data",
+   "label": "Payment Purpose"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -154,7 +154,7 @@
    "link_fieldname": "expense_request_cf"
   }
  ],
- "modified": "2024-09-25 12:17:51.149558",
+ "modified": "2024-09-26 15:00:12.565977",
  "modified_by": "Administrator",
  "module": "Afmco",
  "name": "Expense Request Afmco",
